@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chez Yong — 鼎鼎香 · Cuisine du Sichuan, Paris 13ᵉ</title>
+<meta name="description" content="Maison sichuanaise au 72 rue de la Colonie, Paris 13ᵉ. Marmites bouillonnantes, raviolis faits maison, canard laqué pékinois sur commande. Réservation en ligne.">
+<meta name="theme-color" content="#0c0a09">
+<link rel="preload" href="assets/fonts/cormorant-garamond-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/jost-300-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<div id="preload"><div class="seal cjk">鼎</div><div class="pct">000</div></div>
+<div id="curtain"></div>
+<div id="cursor"><span>VOIR</span></div>
+
+<!-- ============ HEADER ============ -->
+<header class="hdr">
+  <a class="brand" href="index.html">
+    <span class="mark cjk">鼎</span>
+    <span><span class="nm">Chez Yong</span><span class="zh cjk">鼎鼎香</span></span>
+  </a>
+  <nav class="nav">
+    <a class="lk on" href="index.html" data-i18n="nav.home">Accueil</a>
+    <a class="lk" href="menu.html" data-i18n="nav.menu">La carte</a>
+    <a class="lk" href="reserver.html" data-i18n="nav.book">Réserver</a>
+    <a class="lk" href="#infos" data-i18n="nav.contact">Nous trouver</a>
+    <div class="lang" role="group" data-i18n-aria="lang.label">
+      <button type="button" data-lang="fr">FR</button>
+      <button type="button" data-lang="en">EN</button>
+      <button type="button" data-lang="zh">中文</button>
+    </div>
+    <button class="burger" type="button" aria-label="Menu"><i></i><i></i></button>
+  </nav>
+</header>
+
+<nav class="drawer">
+  <a href="index.html"><span data-i18n="nav.home">Accueil</span><span class="zh cjk">首页</span></a>
+  <a href="menu.html"><span data-i18n="nav.menu">La carte</span><span class="zh cjk">菜单</span></a>
+  <a href="reserver.html"><span data-i18n="nav.book">Réserver</span><span class="zh cjk">订座</span></a>
+  <a href="#infos"><span data-i18n="nav.contact">Nous trouver</span><span class="zh cjk">地址</span></a>
+  <div class="foot">72 rue de la Colonie, 75013 Paris<br>01 45 65 17 88</div>
+</nav>
+
+<main>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="hero__bg">
+      <img src="assets/img/hero-steam.jpg" alt="" fetchpriority="high">
+    </div>
+    <canvas id="steam"></canvas>
+
+    <div class="hero__in">
+      <span class="eyebrow" data-i18n="hero.eyebrow">Cuisine du Sichuan · Paris 13ᵉ</span>
+      <h1 class="display">
+        <span class="ln"><i data-i18n="hero.l1">Le feu,</i></span>
+        <span class="ln"><i data-i18n="hero.l2">le poivre,</i></span>
+        <span class="ln"><i><span data-i18n="hero.l3">le partage.</span><span class="zhghost cjk">鼎鼎香</span></i></span>
+      </h1>
+      <div class="hero__meta">
+        <p class="lead" data-i18n="hero.lead"></p>
+        <div class="hero__cta">
+          <a class="btn btn--solid" href="reserver.html" data-magnet><span data-i18n="cta.book">Réserver une table</span><span class="ar">→</span></a>
+          <a class="btn" href="menu.html" data-magnet><span data-i18n="cta.menu">Voir la carte</span></a>
+        </div>
+      </div>
+    </div>
+
+    <span class="scrollcue" data-i18n="hero.cue">Faites défiler</span>
+  </section>
+
+  <!-- ============ MARQUEE ============ -->
+  <div class="marq" aria-hidden="true">
+    <div class="marq__t">
+      <span>Maison sichuanaise <em>川菜</em> · 72 rue de la Colonie <em>巴黎十三区</em> · <b>4,5 ★</b> 603 avis <em>鼎鼎香</em> ·</span>
+    </div>
+  </div>
+
+  <!-- ============ SIGNATURES ============ -->
+  <section class="sigs" id="signatures" data-lines>
+    <div class="sigs__pin">
+      <div class="sigs__ghost cjk" aria-hidden="true">招牌</div>
+      <div class="sigs__track">
+        <div class="sigs__intro">
+          <span class="eyebrow" data-i18n="sig.eyebrow">Les signatures</span>
+          <h2 class="h2">
+            <span class="ln"><i data-i18n="sig.t">Six plats qui racontent la maison.</i></span>
+          </h2>
+          <p class="lead rv" style="margin-top:26px" data-i18n="sig.lead"></p>
+          <p class="rv" style="margin-top:28px">
+            <a class="tlink" href="menu.html" data-i18n="cta.all">Toute la carte</a>
+          </p>
+          <p class="rv" style="margin-top:34px;font-size:.66rem;letter-spacing:.24em;text-transform:uppercase;color:#6d625a" data-i18n="sig.drag">Faites défiler pour parcourir</p>
+        </div>
+        <!-- cards injected from assets/js/menu-data.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CANARD LAQUÉ ============ -->
+  <section class="sec feat wrap" data-lines>
+    <div class="inner feat__grid">
+      <div class="feat__media">
+        <div class="mask" data-wipe>
+          <img src="assets/img/sig-canard.jpg" alt="Canard laqué pékinois" loading="lazy">
+        </div>
+        <div class="tag rv">
+          <span data-i18n="canard.price">Le canard entier</span>
+          <b>65,00 €</b>
+        </div>
+      </div>
+
+      <div class="feat__body">
+        <span class="eyebrow rv" style="display:block;margin-bottom:18px" data-i18n="canard.eyebrow">Sur commande · 24 heures</span>
+        <h2 class="h2">
+          <span class="ln"><i data-i18n="canard.t">Canard laqué pékinois</i></span>
+          <span class="ln"><i class="cjk" style="font-size:.42em;letter-spacing:.14em;color:var(--red)">北京烤鸭</i></span>
+        </h2>
+        <p class="lead rv" style="margin-top:22px" data-i18n="canard.lead"></p>
+        <ul class="feat__list rv">
+          <li><span>01</span><span data-i18n="canard.i1"></span></li>
+          <li><span>02</span><span data-i18n="canard.i2"></span></li>
+          <li><span>03</span><span data-i18n="canard.i3"></span></li>
+        </ul>
+        <div class="rv">
+          <a class="btn btn--solid" href="reserver.html" data-magnet><span data-i18n="canard.cta">Réserver le canard</span><span class="ar">→</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ LE NOM ============ -->
+  <section class="sec story wrap" data-lines>
+    <div class="inner">
+      <span class="eyebrow rv" style="display:block;margin-bottom:20px" data-i18n="story.eyebrow">鼎鼎香 · Le nom</span>
+      <h2 class="h2" style="max-width:20ch;margin-inline:auto">
+        <span class="ln"><i data-i18n="story.t">Trois caractères, une promesse.</i></span>
+      </h2>
+
+      <div class="glyphs rv" style="margin-top:clamp(44px,6vw,80px)">
+        <div class="gl"><b class="cjk">鼎</b><small data-i18n="story.g1">Le chaudron</small></div>
+        <div class="gl"><b class="cjk">鼎鼎</b><small data-i18n="story.g2">Renommé</small></div>
+        <div class="gl"><b class="cjk">香</b><small data-i18n="story.g3">Le parfum</small></div>
+      </div>
+
+      <p class="lead rv" data-i18n="story.lead"></p>
+
+      <div class="mask rv" data-wipe style="max-width:460px;margin:clamp(44px,6vw,80px) auto 0;overflow:hidden;border-radius:3px">
+        <img src="assets/img/chef-hands.jpg" alt="" loading="lazy" style="width:100%;aspect-ratio:4/5;object-fit:cover">
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SPICE METER ============ -->
+  <section class="sec spice wrap" data-lines>
+    <div class="inner spice__grid">
+      <div>
+        <span class="eyebrow rv" style="display:block;margin-bottom:18px" data-i18n="spice.eyebrow">Votre seuil</span>
+        <h2 class="h2">
+          <span class="ln"><i data-i18n="spice.t">Jusqu’où allez-vous ?</i></span>
+        </h2>
+        <p class="lead rv" style="margin-top:22px" data-i18n="spice.lead"></p>
+
+        <div class="sl rv">
+          <div class="sl__row">
+            <span style="font-size:.66rem;letter-spacing:.24em;text-transform:uppercase;color:var(--mute)" data-i18n="spice.level">Niveau</span>
+            <span class="v"><span class="lv">Doux</span></span>
+          </div>
+          <input id="spicerange" type="range" min="0" max="3" step="1" value="2" aria-label="Niveau de piment">
+          <div class="sl__ticks">
+            <span data-i18n="spice.s0">Doux</span>
+            <span data-i18n="spice.s1">Relevé</span>
+            <span data-i18n="spice.s2">Piquant</span>
+            <span data-i18n="spice.s3">Sichuan</span>
+          </div>
+          <p class="spice__count"></p>
+        </div>
+      </div>
+
+      <div class="spice__out rv">
+        <ul></ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ LA SALLE ============ -->
+  <section class="sec salle wrap" data-lines>
+    <div class="inner">
+      <div class="sec__head">
+        <div>
+          <span class="eyebrow" data-i18n="salle.eyebrow">La salle</span>
+          <h2 class="h2" style="max-width:22ch">
+            <span class="ln"><i data-i18n="salle.t">Une table ronde, un plateau tournant, de la place pour douze.</i></span>
+          </h2>
+        </div>
+        <p class="lead rv" data-i18n="salle.lead"></p>
+      </div>
+
+      <div class="salle__grid">
+        <figure class="s1 rv" data-wipe><img src="assets/img/salle-interior.jpg" alt="" loading="lazy"></figure>
+        <figure class="s2 rv" data-par="-6"><img src="assets/img/salle-table.jpg" alt="" loading="lazy"></figure>
+        <figure class="s3 rv" data-par="4"><img src="assets/img/partage-overhead.jpg" alt="" loading="lazy"></figure>
+
+        <div class="salle__note">
+          <div class="chips rv">
+            <span class="chip" data-i18n="salle.c1">Salle privée</span>
+            <span class="chip" data-i18n="salle.c2">Groupes jusqu’à 12</span>
+            <span class="chip" data-i18n="salle.c3">Plateau tournant</span>
+            <span class="chip" data-i18n="salle.c4">À emporter</span>
+            <span class="chip" data-i18n="salle.c5">Livraison</span>
+          </div>
+          <a class="tlink rv" href="reserver.html" data-i18n="salle.cta">Demander la salle privée</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ AVIS ============ -->
+  <section class="sec avis wrap" data-lines>
+    <div class="inner">
+      <span class="eyebrow rv" style="display:block;margin-bottom:26px" data-i18n="avis.eyebrow">Les avis Google</span>
+
+      <div class="avis__score" data-count="4.5">4<em>,</em>5</div>
+      <div class="stars" aria-hidden="true"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+      <p class="avis__meta"><b>603</b> <span data-i18n="avis.count">avis Google</span> · <span data-i18n="avis.of">sur 5</span></p>
+
+      <p class="rv" style="margin-top:clamp(40px,6vw,70px);font-size:.66rem;letter-spacing:.24em;text-transform:uppercase;color:var(--mute)" data-i18n="avis.chipslead">Ce que les clients citent le plus souvent</p>
+      <div class="chips rv" data-review-chips></div>
+
+      <div class="quotes" data-mentions></div>
+    </div>
+  </section>
+
+  <!-- ============ INFOS ============ -->
+  <section class="sec infos wrap" id="infos" data-lines>
+    <div class="inner infos__grid">
+      <div>
+        <span class="eyebrow rv" style="display:block;margin-bottom:18px" data-i18n="infos.eyebrow">Informations</span>
+        <h2 class="h2">
+          <span class="ln"><i data-i18n="infos.t">Nous trouver.</i></span>
+        </h2>
+
+        <p class="rv" style="margin-top:26px">
+          <span class="openbadge"><span class="dot"></span><span class="txt">—</span></span>
+        </p>
+
+        <dl class="dl rv">
+          <div>
+            <dt data-i18n="infos.addr">Adresse</dt>
+            <dd>72 rue de la Colonie<span class="sm">75013 Paris</span></dd>
+          </div>
+          <div>
+            <dt data-i18n="infos.phone">Téléphone</dt>
+            <dd><a href="tel:+33145651788">01 45 65 17 88</a></dd>
+          </div>
+          <div>
+            <dt data-i18n="infos.hours">Service</dt>
+            <dd><span data-i18n="infos.hours.v"></span><span class="sm" data-i18n="infos.hours.sub"></span></dd>
+          </div>
+          <div>
+            <dt data-i18n="infos.metro">Métro</dt>
+            <dd data-i18n="infos.metro.v"></dd>
+          </div>
+          <div>
+            <dt data-i18n="infos.budget">Budget</dt>
+            <dd data-i18n="infos.budget.v"></dd>
+          </div>
+          <div>
+            <dt data-i18n="infos.services">Services</dt>
+            <dd data-i18n="infos.services.v"></dd>
+          </div>
+        </dl>
+      </div>
+
+      <div class="infos__media rv" data-cursor="MAPS">
+        <img src="assets/img/ambience-dark.jpg" alt="" loading="lazy">
+        <div class="pin">
+          <b>Chez Yong</b>
+          <span class="cjk">鼎鼎香</span>
+          <br><span>72 rue de la Colonie · Paris 13ᵉ</span>
+          <br><a class="tlink" href="https://maps.google.com/?q=72+Rue+de+la+Colonie+75013+Paris" target="_blank" rel="noopener" data-i18n="infos.pincta">Ouvrir dans Maps</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CTA BAND ============ -->
+  <section class="band" data-lines>
+    <div class="band__bg"><img src="assets/img/spices.jpg" alt="" loading="lazy"></div>
+    <div class="band__in wrap">
+      <h2 class="h2">
+        <span class="ln"><i data-i18n="band.t">Une table vous attend.</i></span>
+      </h2>
+      <p class="lead rv" style="margin-inline:auto;text-align:center" data-i18n="band.lead"></p>
+      <div class="rv">
+        <a class="btn btn--solid" href="reserver.html" data-magnet><span data-i18n="cta.book">Réserver une table</span><span class="ar">→</span></a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="ftr">
+  <div class="ftr__grid">
+    <div>
+      <p class="ftr__big">Chez Yong<span class="zh cjk">鼎鼎香</span></p>
+    </div>
+    <div>
+      <h4 data-i18n="ftr.pages">Pages</h4>
+      <ul>
+        <li><a href="index.html" data-i18n="nav.home">Accueil</a></li>
+        <li><a href="menu.html" data-i18n="nav.menu">La carte</a></li>
+        <li><a href="reserver.html" data-i18n="nav.book">Réserver</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 data-i18n="ftr.contact">Contact</h4>
+      <ul>
+        <li>72 rue de la Colonie, 75013 Paris</li>
+        <li><a href="tel:+33145651788">01 45 65 17 88</a></li>
+        <li><span data-i18n="infos.hours.v"></span></li>
+      </ul>
+    </div>
+  </div>
+  <div class="ftr__bot">
+    <span data-i18n="ftr.rights"></span>
+    <span data-i18n="ftr.demo"></span>
+  </div>
+</footer>
+
+<script src="assets/vendor/gsap.min.js"></script>
+<script src="assets/vendor/ScrollTrigger.min.js"></script>
+<script src="assets/vendor/lenis.min.js"></script>
+<script src="assets/js/menu-data.js"></script>
+<script src="assets/js/i18n.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Réserver — Chez Yong · 鼎鼎香</title>
+<meta name="description" content="Réservez votre table chez Chez Yong, 72 rue de la Colonie, Paris 13ᵉ. Salle privée jusqu’à 12 personnes, canard laqué pékinois sur commande 24 h.">
+<meta name="theme-color" content="#f4ede2">
+<link rel="preload" href="assets/fonts/cormorant-garamond-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/jost-300-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="light">
+
+<div id="preload"><div class="seal cjk">鼎</div><div class="pct">000</div></div>
+<div id="curtain"></div>
+<div id="cursor"><span>VOIR</span></div>
+
+<!-- ============ HEADER ============ -->
+<header class="hdr">
+  <a class="brand" href="index.html">
+    <span class="mark cjk">鼎</span>
+    <span><span class="nm">Chez Yong</span><span class="zh cjk">鼎鼎香</span></span>
+  </a>
+  <nav class="nav">
+    <a class="lk" href="index.html" data-i18n="nav.home">Accueil</a>
+    <a class="lk" href="menu.html" data-i18n="nav.menu">La carte</a>
+    <a class="lk on" href="reserver.html" data-i18n="nav.book">Réserver</a>
+    <div class="lang" role="group" data-i18n-aria="lang.label">
+      <button type="button" data-lang="fr">FR</button>
+      <button type="button" data-lang="en">EN</button>
+      <button type="button" data-lang="zh">中文</button>
+    </div>
+    <button class="burger" type="button" aria-label="Menu"><i></i><i></i></button>
+  </nav>
+</header>
+
+<nav class="drawer">
+  <a href="index.html"><span data-i18n="nav.home">Accueil</span><span class="zh cjk">首页</span></a>
+  <a href="menu.html"><span data-i18n="nav.menu">La carte</span><span class="zh cjk">菜单</span></a>
+  <a href="reserver.html"><span data-i18n="nav.book">Réserver</span><span class="zh cjk">订座</span></a>
+  <div class="foot">72 rue de la Colonie, 75013 Paris<br>01 45 65 17 88</div>
+</nav>
+
+<main>
+
+  <!-- ============ PAGE HERO ============ -->
+  <section class="phero" data-lines>
+    <span class="zhbig cjk" aria-hidden="true">订座</span>
+    <div class="phero__in">
+      <span class="eyebrow rv" style="display:block;margin-bottom:18px" data-i18n="resv.eyebrow">Réservation</span>
+      <h1 class="display">
+        <span class="ln"><i data-i18n="resv.t">Réserver</i></span>
+      </h1>
+      <div class="phero__row">
+        <p class="lead rv" data-i18n="resv.lead"></p>
+        <span class="openbadge rv"><span class="dot"></span><span class="txt">—</span></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FLOW ============ -->
+  <section class="resv">
+    <div class="resv__in">
+
+      <div>
+        <div class="prog">
+          <div class="prog__s on" data-i18n="resv.p1">Couverts</div>
+          <div class="prog__s" data-i18n="resv.p2">Date &amp; heure</div>
+          <div class="prog__s" data-i18n="resv.p3">Coordonnées</div>
+        </div>
+
+        <!-- step 1 -->
+        <div class="step on" data-step="1">
+          <h2 data-i18n="resv.s1.t">Combien êtes-vous ?</h2>
+          <p class="sub" data-i18n="resv.s1.p"></p>
+
+          <div class="pick" id="covers"></div>
+
+          <p style="margin-top:22px;font-size:.84rem;color:#8a7f74">
+            <span data-i18n="resv.s1.more">Plus de 12 ?</span>
+            <a href="tel:+33145651788" style="color:var(--red);text-decoration:underline;text-underline-offset:3px" data-i18n="resv.s1.morelink"></a>
+          </p>
+
+          <div class="stepnav">
+            <button type="button" class="btn btn--solid" data-next="2" data-magnet><span data-i18n="resv.next">Continuer</span><span class="ar">→</span></button>
+          </div>
+        </div>
+
+        <!-- step 2 -->
+        <div class="step" data-step="2">
+          <h2 data-i18n="resv.s2.t">Quel jour, quel service ?</h2>
+          <p class="sub" data-i18n="resv.s2.p"></p>
+
+          <div class="fgroup">
+            <span class="flabel" data-i18n="resv.s2.date">Date</span>
+            <div class="pick" id="dates"></div>
+          </div>
+
+          <div class="fgroup">
+            <span class="flabel" data-i18n="resv.s2.slots">Créneau</span>
+            <div class="pick slots" id="slots"></div>
+          </div>
+
+          <div class="stepnav">
+            <button type="button" class="btn btn--solid" data-next="3" data-magnet><span data-i18n="resv.next">Continuer</span><span class="ar">→</span></button>
+            <button type="button" class="back" data-back="1" data-i18n="resv.back">Retour</button>
+          </div>
+        </div>
+
+        <!-- step 3 -->
+        <div class="step" data-step="3">
+          <h2 data-i18n="resv.s3.t">Vos coordonnées</h2>
+          <p class="sub" data-i18n="resv.s3.p"></p>
+
+          <div class="frow">
+            <div class="fgroup">
+              <label class="flabel" for="f-first" data-i18n="resv.f.first">Prénom</label>
+              <input class="fin" id="f-first" type="text" autocomplete="given-name">
+            </div>
+            <div class="fgroup">
+              <label class="flabel" for="f-last" data-i18n="resv.f.last">Nom</label>
+              <input class="fin" id="f-last" type="text" autocomplete="family-name">
+            </div>
+          </div>
+
+          <div class="frow">
+            <div class="fgroup">
+              <label class="flabel" for="f-phone" data-i18n="resv.f.phone">Téléphone</label>
+              <input class="fin" id="f-phone" type="tel" autocomplete="tel">
+            </div>
+            <div class="fgroup">
+              <label class="flabel" for="f-mail" data-i18n="resv.f.mail">E-mail</label>
+              <input class="fin" id="f-mail" type="email" autocomplete="email">
+            </div>
+          </div>
+
+          <div class="fgroup">
+            <label class="flabel" for="f-note" data-i18n="resv.f.note">Une précision ?</label>
+            <textarea class="fin" id="f-note" rows="2" data-i18n-ph="resv.f.noteph"></textarea>
+          </div>
+
+          <div class="stepnav">
+            <button type="button" class="btn btn--solid" id="f-send" data-magnet><span data-i18n="resv.send">Confirmer la réservation</span><span class="ar">→</span></button>
+            <button type="button" class="back" data-back="2" data-i18n="resv.back">Retour</button>
+          </div>
+        </div>
+
+        <!-- confirmation -->
+        <div class="done" id="done" style="display:none">
+          <div class="done__seal cjk">鼎</div>
+          <h2 class="h2" data-i18n="resv.done.t">C’est noté.</h2>
+          <p data-i18n="resv.done.p"></p>
+
+          <dl class="recap sum__dl" style="margin-top:36px">
+            <div><dt data-i18n="resv.sum.covers">Couverts</dt><dd id="done-covers">—</dd></div>
+            <div><dt data-i18n="resv.sum.date">Date</dt><dd id="done-date">—</dd></div>
+            <div><dt data-i18n="resv.sum.slot">Créneau</dt><dd id="done-slot">—</dd></div>
+            <div><dt data-i18n="resv.sum.name">Nom</dt><dd id="done-name">—</dd></div>
+          </dl>
+
+          <p style="margin-top:28px">
+            <button type="button" class="tlink" id="again" data-i18n="resv.done.again">Faire une autre réservation</button>
+          </p>
+        </div>
+      </div>
+
+      <!-- ============ SUMMARY ============ -->
+      <aside>
+        <div class="sum">
+          <h3 data-i18n="resv.sum">Votre table</h3>
+          <span class="zh cjk">鼎鼎香 · 72 rue de la Colonie</span>
+
+          <dl class="sum__dl">
+            <div><dt data-i18n="resv.sum.covers">Couverts</dt><dd id="sum-covers">—</dd></div>
+            <div><dt data-i18n="resv.sum.date">Date</dt><dd id="sum-date">—</dd></div>
+            <div><dt data-i18n="resv.sum.slot">Créneau</dt><dd id="sum-slot">—</dd></div>
+            <div><dt data-i18n="resv.sum.name">Nom</dt><dd id="sum-name">—</dd></div>
+          </dl>
+
+          <p class="sum__note" data-i18n="resv.sum.note"></p>
+        </div>
+
+        <div class="rside">
+          <a class="alt" href="tel:+33145651788">
+            <h4 data-i18n="resv.alt1.t">Groupe de plus de 8 ou salle privée</h4>
+            <p data-i18n="resv.alt1.p"></p>
+          </a>
+          <a class="alt" href="menu.html" style="margin-top:14px">
+            <h4 data-i18n="resv.alt2.t">Canard laqué pékinois · 65 €</h4>
+            <p data-i18n="resv.alt2.p"></p>
+          </a>
+          <a class="alt" href="tel:+33145651788" style="margin-top:14px">
+            <h4 data-i18n="resv.alt3.t">À emporter ou livraison</h4>
+            <p data-i18n="resv.alt3.p"></p>
+          </a>
+        </div>
+      </aside>
+
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="ftr">
+  <div class="ftr__grid">
+    <div>
+      <p class="ftr__big">Chez Yong<span class="zh cjk">鼎鼎香</span></p>
+    </div>
+    <div>
+      <h4 data-i18n="ftr.pages">Pages</h4>
+      <ul>
+        <li><a href="index.html" data-i18n="nav.home">Accueil</a></li>
+        <li><a href="menu.html" data-i18n="nav.menu">La carte</a></li>
+        <li><a href="reserver.html" data-i18n="nav.book">Réserver</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 data-i18n="ftr.contact">Contact</h4>
+      <ul>
+        <li>72 rue de la Colonie, 75013 Paris</li>
+        <li><a href="tel:+33145651788">01 45 65 17 88</a></li>
+        <li><span data-i18n="infos.hours.v"></span></li>
+      </ul>
+    </div>
+  </div>
+  <div class="ftr__bot">
+    <span data-i18n="ftr.rights"></span>
+    <span data-i18n="ftr.demo"></span>
+  </div>
+</footer>
+
+<script src="assets/vendor/gsap.min.js"></script>
+<script src="assets/vendor/ScrollTrigger.min.js"></script>
+<script src="assets/vendor/lenis.min.js"></script>
+<script src="assets/js/menu-data.js"></script>
+<script src="assets/js/i18n.js"></script>
+<script src="assets/js/resv.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
